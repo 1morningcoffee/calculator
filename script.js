@@ -80,8 +80,7 @@ function makeCalculatorButtons() {
             const seven = document.createElement('button');
             seven.className = 'seven';
             seven.textContent = '7';
-            seven.addEventListener('click', () => display(7));
-            
+            seven.addEventListener('click', () => display(7));           
 
 
             const eight = document.createElement('button');
@@ -201,3 +200,5 @@ function display(input) {
         calculatorDisplay.textContent = displayValue;
     }
 }
+
+document.addEventListener('keydown', (event) => display(event.key));
